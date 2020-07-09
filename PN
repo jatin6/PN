@@ -1,0 +1,20 @@
+pal = input()  ## Input returns a string so no need to convert using str()
+
+middle = int((len(pal)-1)/2) 
+
+midDigit = str(int(pal[middle]) + 1)
+newpal = ""
+if len(pal) % 2 == 0:
+    for i in range (middle):
+        newpal = newpal + pal[i]
+    newpal = newpal + midDigit 
+    newpal = newpal + newpal[::-1]
+else:
+    for i in range (middle):
+        newpal = newpal + pal[i]
+    newpal = newpal + midDigit + newpal[::-1] 
+    
+
+print (newpal)
+
+
